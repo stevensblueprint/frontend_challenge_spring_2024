@@ -1,7 +1,14 @@
 import blueprintLogo from './assets/blueprint.png'
 import './App.css'
 
+import { useState } from 'react'
+import BlueForm from './components/BlueForm'
+import FormDisplay from './components/FormDisplay'
+
+
 function App() {
+  const [formData, setFormData] = useState({ name: "", email: "", year: "" })
+
   return (
     <>
       <div className='logo'>
@@ -10,9 +17,10 @@ function App() {
         </a>
       </div>
       <h1>Blueprint Frontend Assessment S2024</h1>
-      <p className="">
-        View the designs
-      </p>
+      <div>
+        <BlueForm setFormData={setFormData}/>
+        <FormDisplay formData={formData}/>
+      </div>
     </>
   )
 }
