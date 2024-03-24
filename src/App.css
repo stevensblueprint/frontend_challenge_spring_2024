@@ -132,4 +132,6 @@ body {
 
     border-style: none solid solid solid;
     border-width: thin;
+
+    height: 1em;
 }
