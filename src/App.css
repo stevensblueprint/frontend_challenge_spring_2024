@@ -71,6 +71,7 @@ body {
     border-color: #000000;
 
     width: 100%;
+    font-family: inherit;
 }
 
 .form-inner-item {
