@@ -107,3 +107,29 @@ body {
 .form-inner-submit:hover {
     cursor: pointer;
 }
+
+.form-display-container {
+    display: flex;
+
+    margin: 5%;
+}
+
+.form-display-item {
+    flex: auto;
+}
+
+.form-display-header {
+    margin: 0px;
+    padding: 10px;
+
+    border-style: solid;
+    border-width: thin;
+}
+
+.form-display-content {
+    margin: 0px;
+    padding: 10px;
+
+    border-style: none solid solid solid;
+    border-width: thin;
+}
