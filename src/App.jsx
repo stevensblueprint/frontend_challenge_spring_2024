@@ -33,30 +33,28 @@ function App() {
         <FormDisplay formData={formData}/>
       </div>
 
-      <div className="">
-        <div className="">
-          <img src={memberPicture} alt="Member Picture"/>
+      <div className='ribbon-container'>
+        <div className='ribbon-item'>
+          <img className='ribbon-item-icon' src={memberPicture} alt="Member Picture"/>
         </div>
 
-        <div className="">
-          <div className="">
-            <img src={profileIcon} alt="Profile Headshot"/>
-          </div>
-          <div className="">{ contentJSON.anectdote.quote }</div>
-          <div className="">{ contentJSON.anectdote.author }</div>
+        <div className='ribbon-item'>
+          <img className='ribbon-item-icon-headshot' src={profileIcon} alt="Profile Headshot"/>
+          <div className='ribbon-item-quote'>{ contentJSON.anectdote.quote }</div>
+          <div className='ribbon-item-author'>{ contentJSON.anectdote.author }</div>
         </div>
 
-        <div className="">
-          <div className="">{ contentJSON.content.header }</div>
-          <div className="">{ contentJSON.content.body }</div>
+        <div className='ribbon-item'>
+          <div className='ribbon-item-heading'>{ contentJSON.content.header }</div>
+          <div className='ribbon-item-body'>{ contentJSON.content.body }</div>
         </div>
 
-        <div className="">
-          <img src="" alt="Missing Asset"/>
+        <div className='ribbon-item'>
+          <img className='ribbon-item-icon' src="" alt="Missing Asset"/>
         </div>
       </div>
 
-      <p>Blueprint is cool!</p>
+      <p className='footer-text'>Blueprint is cool!</p>
     </>
   )
 }

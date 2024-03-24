@@ -4,6 +4,9 @@ body {
     --color-accent:    #333333;
     --color-blank:     #ffffff;
 
+    margin-left: 0px;
+    margin-right: 0px;
+    
     font-size: 100%;
 }
 
@@ -134,4 +137,68 @@ body {
     border-width: thin;
 
     height: 1em;
+}
+
+.ribbon-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50%;
+    justify-items: center;
+    row-gap: 50px;
+
+    padding: 50px 10%;
+
+    background-color: var(--color-primary);
+    color: var(--color-blank);
+
+    width: calc(100% - 10% * 2);
+    height: calc(1024px - 50px * 2);
+}
+
+.ribbon-item-icon {
+    height: 100%;
+    width: auto;
+}
+
+.ribbon-item-icon-headshot {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    width: 75%;
+    height: auto;
+}
+
+.ribbon-item-quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 3.25em;
+}
+
+.ribbon-item-quote::before, .ribbon-item-quote::after {
+    content: '"'
+}
+
+.ribbon-item-author {
+    text-align: center;
+    font-size: 3em;
+}
+
+.ribbon-item-author::before {
+    content: '-';
+    margin-right: 5px;
+}
+
+.ribbon-item-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.ribbon-item-body {
+    font-size: 1.75em;
+}
+
+.footer-text {
+    margin: 100px 0px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 600;
 }
