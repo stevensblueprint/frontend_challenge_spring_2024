@@ -14,13 +14,21 @@ function App() {
   
   return (
     <>
-      <div className='logo'>
-        <a href="https://sitblueprint.com" target="_blank">
-          <img src={blueprintLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Blueprint Frontend Assessment S2024</h1>
-      <div>
+      <div className='form-container'>
+        <h1 className='form-header'>Blueprint Frontend Assessment S2024</h1>
+        
+        <div>
+          <a className='form-test' href="https://sitblueprint.com" target="_blank">
+            <img src={blueprintLogo} className='form-logo' alt="Vite logo" />
+          </a>
+        </div>
+
+        <p className='form-description-header'>Nathaniel's Custom Form</p>
+        <p className='form-description-body'>
+          Please submit your information in the form, 
+          so that it can be displayed below!
+        </p>
+        
         <BlueForm setFormData={setFormData}/>
         <FormDisplay formData={formData}/>
       </div>

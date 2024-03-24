@@ -10,10 +10,9 @@ function getYears(from, to) {
     while(from <= to) {
         const id = "form-grad-y" + from;
         fields.push(
-            <div key={from}>
+            <div className='form-inner-item' key={from}>
                 <input id={id} type="radio" name="form-grad" value={from}/>
                 <label htmlFor={id}> {from++} </label>
-                <br/>
             </div>
         );
     }
@@ -35,29 +34,31 @@ export default function BlueForm({ setFormData }) {
     }
 
     return (
-        <form onSubmit={pushData}>
-            <div className="">
-                <label className="" htmlFor="form-name">Name</label><br/>
-                <input id="form-name" className="" 
+        <form className='form-inner-container' onSubmit={pushData}>
+            <div className='form-inner-section'>
+                <label className='form-inner-header' htmlFor="form-name">Name</label><br/>
+                <input id="form-name" className='form-inner-textbox' 
                     type="text" name="form-name" placeholder="Enter your full name"
                     />
             </div>
             
-            <div className="">
-                <label className="" htmlFor="form-email">Email</label><br/>
-                <input id="form-email" className="" 
+            <div className='form-inner-section'>
+                <label className='form-inner-header' htmlFor="form-email">Email</label><br/>
+                <input id="form-email" className='form-inner-textbox' 
                     type="text" name="form-email" placeholder="Enter your Stevens email"
                     />
             </div>
 
-            <div className="">
-                <label htmlFor="form-grad">Graduation Year</label><br/>
+            <div className='form-inner-section'>
+                <label className='form-inner-header' htmlFor="form-grad">Graduation Year</label><br/>
                 <div htmlFor="form-grad">
                     { getYears(2025, 2028) }
                 </div>
             </div>
             
-            <input className="" type="submit" value="Submit"/>
+            <div className='form-inner-section'>
+                <input className='form-inner-submit' type="submit" value="Submit"/>
+            </div>
         </form>
     )
 }
