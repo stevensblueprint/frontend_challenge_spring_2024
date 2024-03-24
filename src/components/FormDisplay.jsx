@@ -1,21 +1,18 @@
 export default function FormDisplay({ formData }) {
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Graduation Year</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <tr>
-                    <td>{ formData.name }</td>
-                    <td>{ formData.email }</td>
-                    <td>{ formData.year }</td>
-                </tr>
-            </tbody>
-        </table>
+        <div className=''>
+            <div className=''>
+                <p>Name</p>
+                <p>{ formData.name }</p>
+            </div>
+            <div className=''>
+                <p>Email</p>
+                <p>{ formData.email }</p>
+            </div>
+            <div className=''>
+                <p>Graduation Year</p>
+                <p>{ formData.year }</p>
+            </div>
+        </div>
     )
 }
