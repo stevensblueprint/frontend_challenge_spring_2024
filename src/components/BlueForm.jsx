@@ -11,7 +11,7 @@ function getYears(from, to) {
         const id = "form-grad-y" + from;
         fields.push(
             <div className='form-inner-item' key={from}>
-                <input id={id} type="radio" name="form-grad" value={from}/>
+                <input id={id} type="radio" name="form-grad" value={from} required/>
                 <label htmlFor={id}> {from++} </label>
             </div>
         );
@@ -39,6 +39,7 @@ export default function BlueForm({ setFormData }) {
                 <label className='form-inner-header' htmlFor="form-name">Name</label><br/>
                 <input id="form-name" className='form-inner-textbox' 
                     type="text" name="form-name" placeholder="Enter your full name"
+                    required
                     />
             </div>
             
@@ -46,6 +47,8 @@ export default function BlueForm({ setFormData }) {
                 <label className='form-inner-header' htmlFor="form-email">Email</label><br/>
                 <input id="form-email" className='form-inner-textbox' 
                     type="text" name="form-email" placeholder="Enter your Stevens email"
+                    pattern="[A-Za-z0-9]+@stevens\.edu" title="Must be a valid Stevens email. Example: jdoe@stevens.edu"
+                    required
                     />
             </div>
 
