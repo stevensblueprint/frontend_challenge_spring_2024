@@ -34,9 +34,7 @@ function App() {
       </div>
 
       <div className='ribbon-container'>
-        <div className='ribbon-item'>
-          <img className='ribbon-item-icon' src={memberPicture} alt="Member Picture"/>
-        </div>
+        <img className='ribbon-item ribbon-item-icon' src={memberPicture} alt="Member Picture"/>
 
         <div className='ribbon-item'>
           <img className='ribbon-item-icon-headshot' src={profileIcon} alt="Profile Headshot"/>
@@ -49,9 +47,9 @@ function App() {
           <div className='ribbon-item-body'>{ contentJSON.content.body }</div>
         </div>
 
-        <div className='ribbon-item'>
-          <img className='ribbon-item-icon' src="" alt="Missing Asset"/>
-        </div>
+        
+          <img className='ribbon-item ribbon-item-icon' src={memberPicture} alt="Member Icon"/>
+        
       </div>
 
       <p className='footer-text'>Blueprint is cool!</p>
