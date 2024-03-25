@@ -14,6 +14,8 @@ body {
 .form-container {
     margin: 50px 33% 50px 33%;
     padding: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
 
     border: solid;
     border-radius: 20px;
@@ -34,8 +36,9 @@ body {
 }
 
 .form-description-header {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     font-size: 1.75em;
+    font-weight: bold;
 }
 
 .form-description-body {
