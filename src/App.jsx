@@ -18,7 +18,7 @@ function App() {
         <h1 className='form-header'>Blueprint Frontend Assessment S2024</h1>
         
         <div>
-          <a className='form-test' href="https://sitblueprint.com" target="_blank">
+          <a href="https://sitblueprint.com" target="_blank">
             <img src={blueprintLogo} className='form-logo' alt="Vite logo" />
           </a>
         </div>

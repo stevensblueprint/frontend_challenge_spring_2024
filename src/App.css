@@ -26,7 +26,7 @@ body {
  
 .form-logo {
     position: relative;
-    left: calc(50% - 72.5px);
+    left: calc(50% - 72px); /* Aspect ratio w/h <=> 144/145 */
     right: 50%;
     height: 145px;
     width: auto;
@@ -81,11 +81,9 @@ body {
 
 .form-inner-item:first-child {
     margin-top: 0px;
-    margin-bottom: 10px;
 }
 
 .form-inner-item:last-child {
-    margin-top: 10px;
     margin-bottom: 0px;
 }
 
