@@ -128,6 +128,8 @@ body {
 
     border-style: solid;
     border-width: thin;
+
+    font-weight: bold;
 }
 
 .form-display-content {
