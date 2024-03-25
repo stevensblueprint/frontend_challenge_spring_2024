@@ -7,6 +7,7 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     
+    font-family: Georgia, system-ui, 'Times New Roman', Times, serif;
     font-size: 100%;
 }
 
@@ -127,6 +128,7 @@ body {
     border-style: solid;
     border-width: thin;
 
+    font-family: Inter, Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
