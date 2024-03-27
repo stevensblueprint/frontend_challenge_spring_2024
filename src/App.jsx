@@ -7,12 +7,10 @@ function App() {
   const [email, setEmail] = useState('');
   const [gradYear, setGradYear] = useState('');
   const [formData, setFormData] = useState(null);
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const Submitit = () => {
     if (name && email && gradYear) {
       setFormData({ name, email, gradYear });
-      setFormSubmitted(true);
     } else {
       alert('Please fill in all fields before submitting.');
     }
@@ -25,7 +23,7 @@ function App() {
 
       <center>
         <div className='logo'>
-          <a href="https://sitblueprint.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://sitblueprint.com" target="_blank" >
             <img src={blueprintLogo} className="logo" alt="Vite logo" />
           </a>
         </div>
@@ -35,13 +33,14 @@ function App() {
       <p><font size="+2">Please submit your information in the form, so that it can be displayed below!</font></p>
 
       <hr />
-
+      <div>
       <p>Name</p>
       <input type="text" size="100" value={name} onChange={(e) => setName(e.target.value)} />
-
+</div>
+<div>
       <p>Email</p>
       <input type="text" size="100" value={email} onChange={(e) => setEmail(e.target.value)} />
-
+      </div>
       <div>
         <label>Graduation Year</label></div>
         <div> <input type="radio" value="2025" checked={gradYear === '2025'} onChange={() => setGradYear('2025')} /> 2025</div>
@@ -55,24 +54,22 @@ function App() {
 
       <hr />
 
-      {formSubmitted && formData && (
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Graduation Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{formData.name}</td>
-              <td>{formData.email}</td>
-              <td>{formData.gradYear}</td>
-            </tr>
-          </tbody>
-        </table>
-      )}
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Graduation Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{formData?.name}</td>
+            <td>{formData?.email}</td>
+            <td>{formData?.gradYear}</td>
+          </tr>
+        </tbody>
+      </table>
     </>
   );
 }
