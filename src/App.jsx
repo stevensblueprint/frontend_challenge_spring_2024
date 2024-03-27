@@ -14,15 +14,17 @@ function App() {
     let [data, setData] = useState(null);
 
     let Submit = () => {
-        setData({ name, email, year });
+
         if(!name){
             alert('Error: name is empty')
         }
-        if(!email){
+        else if(!email){
             alert('Error: email is empty')
         }
-        if(!year){
+        else if(!year){
             alert('Error: no graduation year selected')
+        } else{
+            setData({ name, email, year });
         }
     };
 
