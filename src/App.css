@@ -1,0 +1,14 @@
+th {
+  border: 1px solid;
+  padding: 6px;
+  font-size: small;
+}
+td {
+  border: 1px solid;
+  padding: 6px;
+  font-size: smaller;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+}

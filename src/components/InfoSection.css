@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "MyFont";
+  src: local("MyFont"),
+    url(../fonts/ClassicXtraRound-Regular.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+ul {
+  /*some fancy css*/
+  list-style-type: none;
+  height: 50vh;
+  margin: 50px;
+  width: 75vw;
+}
+li.left {
+  float: left;
+  width: 30vw;
+  margin: 20px;
+  text-align: center;
+}
+li.right {
+  float: right;
+  width: 25vw;
+  margin: 20px;
+  text-align: center;
+}
