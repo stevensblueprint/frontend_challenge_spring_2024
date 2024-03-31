@@ -2,6 +2,7 @@ import memberPicture from "../assets/member.png";
 import profilePicture from "../assets/profile.png";
 import data from "../assets/data/content.json";
 import "./InfoSection.css";
+import { motion } from "framer-motion";
 function InfoSection() {
   const title = data.content.header;
   const bodyData = data.content.body;
@@ -11,25 +12,39 @@ function InfoSection() {
         backgroundColor: "#0078E8",
         margin: 0,
         padding: 0,
+        display: "block",
+        gap: 0,
       }}
     >
       <div>
-        <ul>
-          <li className="left">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <div className="left">
             <div style={{ textAlign: "center" }}>
-              <img
+              <motion.img
                 src={memberPicture}
                 className="logo"
                 alt="Vite logo"
                 style={{
                   width: "20vw",
                 }}
+                initial={{
+                  x: -450,
+                }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
               />
             </div>
-          </li>
-          <li className="right">
+          </div>
+          <div className="right">
             <div style={{ textAlign: "center" }}>
-              <img
+              <motion.img
                 src={profilePicture}
                 className="logo"
                 alt="Vite logo"
@@ -55,12 +70,19 @@ function InfoSection() {
                 - John Doe
               </h1>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
       <div>
-        <ul>
-          <li className="left">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <div className="left">
             <div
               style={{
                 color: "white",
@@ -69,20 +91,25 @@ function InfoSection() {
               <h1>{title}</h1>
               <p>{bodyData}</p>
             </div>
-          </li>
-          <li className="right">
+          </div>
+          <div className="right">
             <div style={{ textAlign: "center" }}>
-              <img
+              <motion.img
                 src={memberPicture}
                 className="logo"
                 alt="Vite logo"
                 style={{
                   width: "20vw",
                 }}
+                initial={{
+                  x: 400,
+                }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
               />
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

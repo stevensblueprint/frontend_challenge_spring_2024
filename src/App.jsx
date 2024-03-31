@@ -1,7 +1,8 @@
 import blueprintLogo from "./assets/blueprint.png";
 import "./App.css";
 import { useState } from "react";
-import data from "./assets/data/content.json";
+import { motion } from "framer-motion";
+import backdrop from "./assets/newbackground.jpg";
 
 function App() {
   const [name, setName] = useState("");
@@ -30,10 +31,10 @@ function App() {
   };
 
   return (
-    <div style={{ margin: "5px" }}>
+    <div style={{ backgroundImage: `url(${backdrop})`, padding: "100px" }}>
       <div
         style={{
-          border: "2px solid #0078E8",
+          border: "3px solid #0078E8",
           padding: "5vw",
           borderRadius: "20px",
           width: "30vw",
@@ -45,7 +46,16 @@ function App() {
         <h1 style={{ textAlign: "center" }}> Frontend Assessment S2024</h1>
         <div style={{ textAlign: "center" }}>
           <a href="https://sitblueprint.com" target="_blank">
-            <img
+            <motion.img
+              initial={{
+                rotate: "0deg",
+                scale: 0,
+              }}
+              animate={{
+                rotate: ["0deg", "180deg", "360deg"],
+                scale: [0, 1.25, 1],
+              }}
+              transition={{ duration: 2, times: [0, 0.5, 1] }}
               src={blueprintLogo}
               className="logo"
               alt="Vite logo"
@@ -68,7 +78,7 @@ function App() {
           }}
         />
         <form onSubmit={updateFormData}>
-          <label for="fName">Name</label>
+          <label>Name</label>
           <br />
           <input
             type="text"
@@ -81,7 +91,7 @@ function App() {
           />
           <br />
           <br />
-          <label for="fEmail">Email</label>
+          <label>Email</label>
           <br />
           <input
             type="email"
@@ -142,7 +152,8 @@ function App() {
             </label>
           </div>
           <div style={{ textAlign: "center" }}>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.5 }}
               style={{
                 fontSize: "20px",
                 backgroundColor: "#0078E8",
@@ -154,7 +165,7 @@ function App() {
               }}
             >
               Submit
-            </button>
+            </motion.button>
           </div>
         </form>
         <br />
