@@ -74,3 +74,5 @@ If you have additional time and want to add some extra features to your applicat
 3. Email a link to your Pull Request (PR) to **sit.blueprint@gmail.com**. Please make the subject of your email "Frontend Challenge: YOURNAME" i.e "Frontend Challenge: Christian Apostol". 
 
 This challenge is due on March 28 @ 11:59 P.M. Challenges will be discussed during the 3rd round of applications: Coffee Chats. Thank you for your time!
+
+Adding Vercel.
