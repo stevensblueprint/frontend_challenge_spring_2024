@@ -1,0 +1,27 @@
+ .button {
+     background-color: #0078E8; /* Green */
+     border: none;
+     border-radius: 50px;
+     color: white;
+     padding: 10px 25px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 24px;
+     font-family: Averia Serif Libre;
+     margin: 4px 2px;
+     cursor: pointer;
+ }
+
+ .table {
+     border: 1px solid white;
+     padding: 0px 50px;
+ }
+
+ td{
+     border: 1px solid white;
+     text-align: left;
+     padding-right: 100px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
